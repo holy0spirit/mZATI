@@ -9,17 +9,17 @@ class JSON:
     def mPostData(request):
         try:
             # get post data
-            # mPostData = request.get_json()
-            # mFileName = mPostData["key"]
-            # mData = mPostData["data"][0]
+            mPostData = request.get_json()
+            mFileName = mPostData["key"]
+            mData = mPostData["data"][0]
 
             # DEMO TEST DATA
-            mFileName = 'PWP7O6ML3YN'
-            mData = {
-                "name" : "Abe Duke",
-                "gender" : "female",
-                "age" : "16"
-            }
+            # mFileName = 'PWP7O6ML3YN'
+            # mData = {
+            #     "name" : "Abe Duke",
+            #     "gender" : "female",
+            #     "age" : "16"
+            # }
 
             # get encryption key
             mEncryptionKey = Hash.mHash(mFileName)
@@ -44,11 +44,11 @@ class JSON:
     def mGetData(request):
         try:
             # get post data
-            # mPostData = request.get_json()
-            # mFileName = mPostData["key"]
+            mPostData = request.get_json()
+            mFileName = mPostData["key"]
 
-            # DEMO TEST DATA
-            mFileName = 'PWP7O6ML3YN'
+            # # DEMO TEST DATA
+            # mFileName = 'PWP7O6ML3YN'
 
             # check for file
             mFileExist = File.mCheckFileExist(mFileName)

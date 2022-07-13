@@ -23,7 +23,7 @@ def mJsonGenerate():
     return jsonify(mGen)
     
 
-@app.route('/post_json', methods=["GET"])
+@app.route('/post_json', methods=["POST"])
 def mJSONPostData():
 
     mPostData = JSON.mPostData(request)
@@ -33,7 +33,7 @@ def mJSONPostData():
 
 
 
-@app.route('/get_json', methods=["GET"])
+@app.route('/get_json', methods=["POST"])
 def mJSONGetData():
     
     mGetData = JSON.mGetData(request)
