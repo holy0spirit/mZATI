@@ -31,8 +31,6 @@ def mJSONPostData():
     return jsonify(mPostData)
     
 
-
-
 @app.route('/get_json', methods=["POST"])
 def mJSONGetData():
     
