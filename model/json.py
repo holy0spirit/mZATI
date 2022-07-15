@@ -11,7 +11,7 @@ class JSON:
             # get post data
             mPostData = request.get_json()
             mFileName = mPostData["key"]
-            mData = mPostData["data"][0]
+            mData = mPostData["data"]
 
             # DEMO TEST DATA
             # mFileName = 'PWP7O6ML3YN'
@@ -27,15 +27,23 @@ class JSON:
             # convert json to bytes
             mJSONDataBytes = json.dumps(mData).encode('utf-8')
 
+            print(mEncryptionKey)
+
             # encrypt json data
             mEncryptor = Fernet(mEncryptionKey)
+            
+
             mEncryptedData = mEncryptor.encrypt(mJSONDataBytes)
+
+          
 
             # convert encrypted data to string
             mEncryptedDataString = mEncryptedData.decode("utf-8")
+            
 
             # store encrypted data
             Storage.mStorage(mFileName, mEncryptedDataString)
+            
 
             return {"message" : "Successful. Post JSON data.", "status" : "200", "key" : mFileName}
         except Exception as e:

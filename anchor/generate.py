@@ -11,7 +11,8 @@ class Generate:
             mJsonFile = open("storage/%s.txt" % mFileName, "w")
 
             # create HashKey
-            Cipher.mJSONDataEncryptionKey(mFileName)
+            mHashKey = Cipher.mJSONDataEncryptionKey(mFileName)
+            print(mHashKey)
 
             return {"message" : "Successful. Key generated.", "status" : "200", "key" : mFileName}
         except Exception as e:
