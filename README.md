@@ -1,4 +1,4 @@
-# swaqDB
+# swaqdb
  ###### JSON Encrypted Data Storage for Developers
 
  > Working with JSON Data? You have the best JSON Database here fully encrypted for your privacy.
