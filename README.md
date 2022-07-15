@@ -1,2 +1,2 @@
 # swaqdb
- JSON Encrypted Data Storage for Front-end Developers
+ JSON Encrypted Data Storage
