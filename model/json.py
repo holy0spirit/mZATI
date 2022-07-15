@@ -27,8 +27,6 @@ class JSON:
             # convert json to bytes
             mJSONDataBytes = json.dumps(mData).encode('utf-8')
 
-            print(mEncryptionKey)
-
             # encrypt json data
             mEncryptor = Fernet(mEncryptionKey)
             

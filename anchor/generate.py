@@ -12,7 +12,7 @@ class Generate:
 
             # create HashKey
             mHashKey = Cipher.mJSONDataEncryptionKey(mFileName)
-            print(mHashKey)
+            
 
             return {"message" : "Successful. Key generated.", "status" : "200", "key" : mFileName}
         except Exception as e:
