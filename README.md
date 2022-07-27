@@ -1,4 +1,4 @@
-# swaqDB
+# mZATI
  ###### JSON Encrypted Data Storage for Developers
 
  > Working with JSON Data? You have the best JSON Database here fully encrypted for your privacy.
@@ -70,29 +70,7 @@ Send a POST request to https://swaqdb.herokuapp.com/post_json
 
     payload = json.dumps({
     "key": "XXXXXXXXXXX",
-    "data": [
-        {
-        "name": "Ulande Victoria",
-        "age": "17",
-        "gender": "female",
-        "email": "ulande.victoria@aol.com",
-        "phone": "08000000000"
-        },
-        {
-        "name": "Ulande Victoria",
-        "age": "17",
-        "gender": "female",
-        "email": "ulande.victoria@aol.com",
-        "phone": "08000000000"
-        },
-        {
-        "name": "Ulande Victoria",
-        "age": "17",
-        "gender": "female",
-        "email": "ulande.victoria@aol.com",
-        "phone": "08000000000"
-        }
-    ]
+    "data": json-data
     })
     headers = {
     'Content-Type': 'application/json'
