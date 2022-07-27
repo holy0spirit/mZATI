@@ -1,0 +1,91 @@
+body {
+    background-image: url("../img/background.jpg.jpg");
+    background-color: #00003F;
+   }
+
+.content {
+    position: absolute;
+    width: 408px;
+    height: 352px;
+    left: 516px;
+    top: 336px;
+}
+.content2 {
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 200px;
+    top: 100px;
+}
+
+.mAH {
+    background: #1E3376;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    /* identical to box height */
+
+
+    color: #00003F;
+}
+
+.mAH:not(.collapsed) {
+    background: #F3C211;
+}
+
+.mAI {
+    background: #1E3376;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #FFFFFF;
+}
+
+
+.mH1 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 128px;
+    line-height: 155px;
+    /* identical to box height */
+
+
+    color: #F3C211;
+}
+
+.mP {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+#mDocumentationScreen {
+  display: none;  
+}
+.mBtn1 {
+    background: #F3C211;
+    border-radius: 45px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    /* identical to box height */
+    padding: 18px;
+
+
+    color: #00003F;
+}
+

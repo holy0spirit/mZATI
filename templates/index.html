@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mZATI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="../static/css/custom.css" rel="stylesheet" />
+</head>
+  <body>
+    <!-- Onboarding Screen Start -->
+    <div class="container" id="onBoardingScreen">
+        <div class="row">
+            <div class="col-lg-2 col-md-12 col-sm-12"></div>
+            <div class="col-lg-8 col-md-12 col-sm-12 text-center content">
+                <h1 class="mH1">mZATI</h1>
+                <p class="mP">JSON Encrypted Data Storage for Developers</p>
+                <button type="button" class="btn btn-primary mBtn1" onclick="mGetstarted()">Get Started</button>
+            </div>
+            <div class="col-lg-2 col-md-12 col-sm-12"></div>
+        </div>
+    </div>
+
+    <!-- Onboarding Screen Ends -->
+
+    <div class="container" id="mDocumentationScreen">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 content2">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item mAI">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button mAH" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Generate Key
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <pre>
+                            import requests
+
+                            url = "https://swaqdb.herokuapp.com/gen"
+                         
+                            payload = ""
+                            headers = {}
+                         
+                            response = requests.request("GET", url, headers=headers, data=payload)
+                         
+                            print(response.text)
+                          </pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item mAI">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed mAH" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          POST JSON Object
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <pre>
+                            import requests
+                            import json
+                        
+                            url = "https://swaqdb.herokuapp.com/post_json"
+                        
+                            payload = json.dumps({
+                            "key": "XXXXXXXXXXX",
+                            "data": json-data
+                            })
+                            headers = {
+                            'Content-Type': 'application/json'
+                            }
+                        
+                            response = requests.request("POST", url, headers=headers, data=payload)
+                        
+                            print(response.text)
+                          </pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item mAI">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed mAH" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          GET JSON Object
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <pre>
+                            import requests
+                            import json
+                        
+                            url = "https://swaqdb.herokuapp.com/get_json"
+                        
+                            payload = json.dumps({
+                            "key": "XXXXXXXXXXX"
+                            })
+                            headers = {
+                            'Content-Type': 'application/json'
+                            }
+                        
+                            response = requests.request("POST", url, headers=headers, data=payload)
+                        
+                            print(response.text)
+                          </pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="../static/js/custom.js" ></script>
+  </body>
+</html>

@@ -1,5 +1,5 @@
 # from crypt import methods
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 import string
 import random
 import json
@@ -12,9 +12,9 @@ app = Flask(__name__)
 CORS(app)
 
 @app.route('/')
-def helloworld():
+def onSite():
 
-    return jsonify({"message" : "Hello World", "status" : "200"})
+    return render_template("index.html")
 
 
 @app.route('/gen', methods=["GET"])
